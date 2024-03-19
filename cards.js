@@ -16,13 +16,14 @@ async function newDeckToShow() {
   const newDeck = await fetch(`${NEW_DECK_URL}${SHUFFLE_ENDPOINT}`);
   const data = await newDeck.json();
   console.log(data);
-  deck_id_card = data.deck_id;
+  deck_id_card_deck = data.deck_id;
 }
 
 //loads page w card ID from new deck
 $(document).ready(function () {
   newDeckToShow();
 });
+
 
 
 //draws card on events
